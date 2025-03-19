@@ -4,6 +4,8 @@ import Banner from "../components/specific/Banner";
 import Footer from "../components/Layout/Footer";
 import SkillsCareerSection from "../components/specific/SkillsCareerSection";
 import CenteredContent from "../components/specific/CenteredContent";
+import TracksCard from "../components/common/TracksCard";
+import TracksCardSection from "../components/specific/TracksCardSection";
 
 function Home() {
   return (
@@ -14,6 +16,7 @@ function Home() {
       <div className="w-screen">
         <CenteredContent />
       </div>{" "}
+      <TracksCardSection />
       <Footer />
     </>
   );
