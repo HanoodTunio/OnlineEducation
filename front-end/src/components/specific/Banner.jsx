@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 
 function Banner() {
   return (
-    <div className="w-full flex flex-col md:flex-row my-10 px-0 mt-24">
-      {/* Left Section (Bilkul Left Start, No Extra Space) */}
-      <div className="w-full md:w-1/2 order-2 md:order-1 mt-10 md:mt-32 flex flex-col items-start md:pl-0">
+    <div className="w-screen max-w-none gap-4 flex flex-col md:flex-row my-10 px-12 mt-24 overflow-hidden ">
+      {/* Left Section (Text Content) */}
+      <div className="w-full md:w-1/2 order-2 md:order-1 mt-10 md:mt-32 flex flex-col items-start px-5 md:px-10">
         <div className="leading-tight">
-          {" "}
           <h1 className="text-4xl font-bold text-left">
             The <span className="text-orange-500">Smart</span> <br />
             Choice For <span className="text-orange-500">Future</span>
@@ -21,8 +20,8 @@ function Banner() {
         </div>
 
         {/* Email Input & Button in Same Row */}
-        <div className="flex items-center gap-4 mt-18 w-full">
-          <label className="flex items-center border rounded-md px-3 py-2 w-full max-w-[300px]">
+        <div className="flex items-center gap-6 mt-6 w-full">
+          <label className="flex items-center border rounded-md px-3 py-2 w-full max-w-[400px]">
             <svg
               className="h-5 w-5 text-gray-500"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,10 +53,10 @@ function Banner() {
       </div>
 
       {/* Right Section (Image) */}
-      <div className="w-full md:w-1/2 order-1 flex justify-center md:justify-end mt-12">
+      <div className="w-full md:w-1/2 order-1  flex justify-center md:justify-end mt-12 px-5 md:px-10">
         <img
           src={BannerImage}
-          className="w-[300px] h-[300px] sm:w-[250px] sm:h-[250px] lg:w-[600px] lg:h-[400px]"
+          className="w-full max-w-[600px] h-auto"
           alt="Book"
         />
       </div>
