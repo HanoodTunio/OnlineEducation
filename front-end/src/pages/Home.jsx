@@ -6,6 +6,7 @@ import SkillsCareerSection from "../components/specific/SkillsCareerSection";
 import CenteredContent from "../components/specific/CenteredContent";
 import TracksCard from "../components/common/TracksCard";
 import TracksCardSection from "../components/specific/TracksCardSection";
+import NewBanner from "../components/specific/NewBanner";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
         <CenteredContent />
       </div>{" "}
       <TracksCardSection />
+      <NewBanner />
       <Footer />
     </>
   );
