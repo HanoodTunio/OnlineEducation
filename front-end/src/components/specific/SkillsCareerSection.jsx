@@ -6,9 +6,9 @@ import OnlineImg from "../../assets/Images/online.png";
 
 function SkillsCareerSection() {
   return (
-    <div className="bg-[#4D2C5E] p-10 rounded-xl flex justify-center min-h-[250px] w-full max-w-[1300px] mx-auto px-5 md:px-10 lg:px-16">
+    <div className="bg-[#4D2C5E]  rounded-xl flex justify-center min-h-[250px] w-full max-w-[1300px] mx-auto ">
       {/* Responsive layout: flex-col for mobile, flex-row for md+ */}
-      <div className="flex flex-col md:flex-row gap-2 sm:gap-2 md:gap-6 justify-center items-center w-full">
+      <div className="flex flex-col md:flex-row gap-2 sm:gap-2 md:gap-6 justify-center items-center w-full px-4 py-2">
         <SkillsCareerCards
           heading="Learn The Latest Skills"
           paragraph="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a BC, making it over 2000 years old."

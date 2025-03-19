@@ -3,13 +3,15 @@ import GroupLogo from "../../assets/Images/Group.png";
 
 function Footer() {
   return (
-    <footer className="footer bg-base-200 text-base-content p-10 flex flex-col lg:flex-row justify-between items-center lg:items-start text-center lg:text-left gap-6">
+    <footer
+      className="footer text-base-content p-10 flex flex-col lg:flex-row justify-between items-center lg:items-start text-center lg:text-left gap-6"
+      style={{ backgroundColor: "rgb(248,248,240)" }}
+    >
       {/* Left Column: Logo and Paragraph */}
       <div className="w-full lg:w-1/4 flex flex-col items-center lg:items-start">
         <img src={GroupLogo} alt="Logo" width="50" height="50" />
         <p className="mt-3 text-sm leading-relaxed text-gray-600 max-w-xs">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
         </p>
       </div>
 

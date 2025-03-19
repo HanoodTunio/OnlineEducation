@@ -12,53 +12,70 @@ function TracksCard({
   sales,
 }) {
   return (
-    <div className="bg-white rounded-lg p-4 w-full max-w-sm">
-      {/* Image */}
+    <div className="relative bg-white rounded-2xl shadow-md w-full max-w-sm overflow-visible pb-14">
+      {/* Top Image */}
       <img
         src={image}
         alt={heading}
-        className="w-full h-40 object-cover rounded-md"
+        className="w-full h-40 object-cover rounded-t-2xl"
       />
 
-      {/* Light Gray Heading with Rating */}
-      <div className="flex justify-between items-center bg-gray-100 p-2 mt-2 rounded-md">
-        <h4 className="text-gray-600 text-sm font-semibold">{heading}</h4>
-        <div className="flex items-center text-yellow-500">
-          {Array.from({ length: rating }).map((_, index) => (
-            <FaStar key={index} />
-          ))}
+      {/* Card Content */}
+      <div className="p-4">
+        {/* Category & Rating (top row) */}
+        <div className="flex items-start justify-between">
+          <span className="text-sm font-semibold text-gray-500">{heading}</span>
+          <div className="flex items-center text-yellow-500">
+            {Array.from({ length: rating }).map((_, index) => (
+              <FaStar key={index} />
+            ))}
+          </div>
+        </div>
+
+        {/* Course Title & Price */}
+        <h2 className="text-xl font-semibold mt-2">{mainHeading}</h2>
+        <p className="text-orange-500 text-lg font-bold mt-1">${price}</p>
+
+        {/* Dashed Divider */}
+        <div className="my-4 border-t border-dashed border-gray-300"></div>
+
+        {/* Course Info (time, courses, sales) */}
+        <div className="flex justify-between text-gray-500 text-sm">
+          <div className="flex items-center gap-1">
+            <FaClock />
+            <span>{time}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <FaVideo />
+            <span>{courses} Courses</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <FaDownload />
+            <span>{sales} Sales</span>
+          </div>
         </div>
       </div>
 
-      {/* Main Heading */}
-      <h2 className="text-lg font-bold mt-2">{mainHeading}</h2>
-
-      {/* Price */}
-      <p className="text-lg text-green-600 font-semibold">${price}</p>
-
-      {/* Break Line */}
-      <hr className="my-2" />
-
-      {/* Time, Courses & Sales */}
-      <div className="flex justify-between text-gray-500 text-sm">
-        <div className="flex items-center gap-1">
-          <FaClock /> <span>{time}</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <FaVideo /> <span>{courses} courses</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <FaDownload /> <span>{sales} Sales</span>
-        </div>
-      </div>
-
-      {/* Join Course Button */}
-      {/* Centered Button Wrapper */}
-      <div className="flex justify-center mt-4">
-        <button className="px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition">
-          Join Course
-        </button>
-      </div>
+      {/* Absolutely positioned Join Course Button */}
+      <button
+        className="
+          absolute 
+          left-1/2 
+          bottom-0 
+          transform 
+          -translate-x-1/2 
+          translate-y-1/2 
+          bg-orange-500 
+          text-white 
+          px-6 
+          py-2 
+          rounded-full 
+          hover:bg-orange-600 
+          transition
+        "
+      >
+        Join Course
+      </button>
     </div>
   );
 }
